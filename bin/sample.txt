@@ -1,0 +1,73 @@
+#Here are sample queries.
+
+#********************************************************
+#         Query with closures				
+#							
+#	Note: first set the test file to "closure.xml"	
+#							
+#********************************************************
+
+#01: single selection on the attribute
+//book[@id]/name/text()
+
+#02: single selction on the child and output on attribute
+//pub[year]//book/@id
+
+#03: multi-selection
+//pub[year>2000]//book[author]/name/text()
+
+#04: aggregation with closure
+//pub[year]//book[@id>2]/price/sum()
+
+#********************************************************
+#         Query with aggregations			
+#							
+#	Note: first set the test file to "test.xml"	
+#						
+#********************************************************
+
+#01: Selection on attribute, aggregation on itself
+/book[@id>2]/count()
+
+#02: Selction on attribute, aggregation on child text
+/book[@id>2]/price/sum()
+OR:
+/book[@id>2]/sum(price)
+
+#03: Selection on child, aggregation on itself
+/book[year>1998]/count()
+
+#04: Selection on child, aggregation on child
+/book[year>1998]/sum(price)
+OR:
+/book[year>1998]/price/sum()
+
+#05: Multi-selection and aggregation on itself
+/book[year>1990]/author[@id]/name/count()
+
+#********************************************************
+#         Simple queries				
+#							
+#	Note: first set the test file to "test.xml"	
+#							
+#********************************************************
+#01: No selection. Output child text.
+
+/paper/title
+
+
+#02: Selction on attribute, output child text
+
+/paper[@year]/title
+
+
+#03: Selection on child text, output current atttibute
+/paper[year=1999]/@id
+
+#04: Selection on current attribute, output child text of child.
+/book[@id > 1]/author/name
+
+#05: Multiselection:
+/book[year=1998]/author[@id]/name/text()
+
+

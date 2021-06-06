@@ -1,0 +1,57 @@
+<root>
+  <pub>
+    <book>
+      <name> Book A </name>
+      <author> X </author>
+      <price>99</price>
+    </book>
+    <book>
+      <pub>
+	<book id="5">
+	  <name> Book B </name>
+	  <author> Y </author>
+	</book>
+	<year>1995</year>
+      </pub>
+    </book>
+    <book>
+      <name> Book C </name>
+    </book>
+    <year>2001</year>
+  </pub>
+  <pub>
+    <book id="1">
+      <author> Z </author>
+      <name> book D </name>
+      <price> 15 </price>
+    </book>
+    <book id="2">
+      <author> author 005 </author>
+      <name> book E </name>
+      <price> 55 </price>
+    </book>
+    <year>1995</year>
+     <book id="3">
+      <author> author 005 </author>
+      <name> book E2 </name>
+      <price> 95 </price>
+    </book>
+  </pub>
+  <pub>
+    <book id="4">
+      <author> Z4 </author>
+      <name> book D4 </name>
+      <price> 15 </price>
+    </book>
+    <book id="5">
+      <author> author 0055 </author>
+      <name> book E5 </name>
+      <price> 55 </price>
+    </book>
+     <book id="6">
+      <author> author 0056 </author>
+      <name> book E6 </name>
+      <price> 95 </price>
+    </book>
+  </pub>
+</root>

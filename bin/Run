@@ -1,0 +1,12 @@
+#!/bin/bash
+JAVA_HOME=/usr/java/j2sdk1.4.0_01
+CLASSPATH=${CLASSPATH}:${JAVA_HOME}/lib:~/xsq/bin:~/xsq/lib:~/xsq/lib/xerces.jar:~/xsq/lib/grappa.jar
+
+alias run='java -Dorg.xml.sax.driver=org.apache.xerces.parsers.SAXParser edu.umd.cs.db.xsq.XSQ'
+
+#GUI
+java -Dorg.xml.sax.driver=org.apache.xerces.parsers.SAXParser edu.umd.cs.db.xsq.XSQFrame
+
+#comman line example 
+#java -Dorg.xml.sax.driver=org.apache.xerces.parsers.SAXParser
+#     edu.umd.cs.db.xsq.XSQ -r "root" closure.xml "//pub//book//name/text()"
